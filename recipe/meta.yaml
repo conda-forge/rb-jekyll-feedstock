@@ -38,8 +38,6 @@ requirements:
     - rb-terminal-table >=1.8,<2
 
 test:
-  requires:
-    - rb-minima
   commands:
     - jekyll --help
     - jekyll build --help
