@@ -13,7 +13,7 @@ build:
   noarch: generic
   number: 0
   script: 
-    - gem install --norc -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
+    - gem install --norc -N -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
   skip: {{ win }}
 
@@ -38,6 +38,8 @@ requirements:
     - rb-terminal-table >=1.8,<2
 
 test:
+  requires:
+    - git
   commands:
     - jekyll --help
     - jekyll build --help
